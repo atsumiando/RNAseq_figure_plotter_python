@@ -8,33 +8,33 @@ It is python codes and use "python rnaseq_figure_plotter.py -i input_file -t bar
 
 # parameter of rnaseq_figure_plotter
 
-  HELP		-h, --help		show this help message and exit
+  	HELP		-h, --help		show this help message and exit
 
 required function
 
-  INPUT		-i, --input		input file name
-  TYPE		-t, --type		choose plot types (bar, box, density, dot, heatmap, histogram, line, scatter, or violin)
+  	INPUT		-i, --input		input file name
+ 	 TYPE		-t, --type		choose plot types (bar, box, density, dot, heatmap, histogram, line, scatter, or violin)
 
 general optional function
 
-  OUTPUT		-o, --output		default output; output file name
-  GENE		-g, --gene		file name of specific gene ID list; generate "output"_gene_selection.txt file
-LOG2		-l, --log		default None; calculate log value (log2; 2, log10; 10, loge; e)
-LOG2_NUMBER	-lgn, --log_number		default 0.000000001; add number to avoid -inf for log value
-XAXIS		-x, --xaxis		default samples; choose x-axis (gene, sample, or value)
-YAXIS		-y, --yaxis		default data; choose y-axis (gene, sample, or value)
-ZAXIS		-z, --zaxis		default gene; choose z-axis (gene, sample, or value)
-COLOR		-c, --color		default 1; choose color type (1-10)
-FIGURE_SAVE_FORMAT	-f, --figure_save_format		default pdf; choose format of figures (eps, jpeg, jpg, pdf, pgf, png, ps, raw, rgba, svg, svgz, tif, or tiff)
+  	OUTPUT		-o, --output		default output; output file name
+  	GENE		-g, --gene		file name of specific gene ID list; generate "output"_gene_selection.txt file
+	LOG2		-l, --log		default None; calculate log value (log2; 2, log10; 10, loge; e)
+	LOG2_NUMBER	-lgn, --log_number		default 0.000000001; add number to avoid -inf for log value
+	XAXIS		-x, --xaxis		default samples; choose x-axis (gene, sample, or value)
+	YAXIS		-y, --yaxis		default data; choose y-axis (gene, sample, or value)
+	ZAXIS		-z, --zaxis		default gene; choose z-axis (gene, sample, or value)
+	COLOR		-c, --color		default 1; choose color type (1-10)
+	FIGURE_SAVE_FORMAT	-f, --figure_save_format		default pdf; choose format of figures (eps, jpeg, jpg, pdf, pgf, png, ps, raw, rgba, svg, svgz, tif, or tiff)
 
 optional parameter for individual plot types
 
-STYLE		-s, --style		default 1; choose style of figures (1-8)
-ZSCORE		-zs, --zscore		default None; apply z-score transformation in heatmap. Z-score application in column or row is --xaxis (column); 1, and --zaxis (row); 2)
-CLUSTER_COLUMN	-cc, --cluster_column		default None; apply column cluster function for heatmap (on; 1)
-CLUSTER_ROW	-cr, --cluster_row		default None; apply row cluster function for heatmap (on; 1)
-SCATTER_COLUMN	-sc, --scatter_column		default None; type column of two samples for comparison in dot plot. Split samples by comma(,). (example "sample1,sample2")
-SCATTER_ROW	-sr, --scatter_row		default None; type row of two genes for comparison in dot plot. Split genes by comma(,). (example "geneA,geneB")
+	STYLE		-s, --style		default 1; choose style of figures (1-8)
+	ZSCORE		-zs, --zscore		default None; apply z-score transformation in heatmap. Z-score application in column or row is --xaxis (column); 1, and --zaxis (row); 2)
+	CLUSTER_COLUMN	-cc, --cluster_column		default None; apply column cluster function for heatmap (on; 1)
+	CLUSTER_ROW	-cr, --cluster_row		default None; apply row cluster function for heatmap (on; 1)
+	SCATTER_COLUMN	-sc, --scatter_column		default None; type column of two samples for comparison in dot plot. Split samples by comma(,). (example "sample1,sample2")
+	SCATTER_ROW	-sr, --scatter_row		default None; type row of two genes for comparison in dot plot. Split genes by comma(,). (example "geneA,geneB")
 
 
 
@@ -107,16 +107,16 @@ Default of x-axis, y-axis, and z-axis are sample, data, and gene, respectively. 
 Following table shows which axis you can modify.
 
 
-plots		x-axis	y-axis	legend
-bar		x	y	z*
-box		x	y
-density		x*
-dot		x	y	z*
-heatmap		x*	z*	
-histogram	x*
-line		x*	y(data)	z*
-scatter
-violin		x	y
+	plots		x-axis	y-axis	legend
+	bar		x	y	z*
+	box		x	y
+	density		x*
+	dot		x	y	z*
+	heatmap		x*	z*	
+	histogram	x*
+	line		x*	y(data)	z*
+	scatter
+	violin		x	y
 
 *(sample or gene)
 
@@ -127,17 +127,17 @@ violin		x	y
 Seaborn color palette (https://seaborn.pydata.org/tutorial/color_palettes.html) is using for color setting. Setting is followings;
 
 
-settings	palette			color description
-1		RdBu_r (default)	red to blue 
-2		Reds			red to white
-3		Blues			blue to white
-4		RdYlBu_r		red to yellow to blue
-5		RdGy_r			red to glay
-6		Paired			read seaborn website
-7		cubehelix		read seaborn website
-8		muted			read seaborn website
-9		hls			read seaborn website
-10		Set2			read seaborn website
+	settings	palette			color description
+	1		RdBu_r (default)	red to blue 
+	2		Reds			red to white
+	3		Blues			blue to white
+	4		RdYlBu_r		red to yellow to blue
+	5		RdGy_r			red to glay
+	6		Paired			read seaborn website
+	7		cubehelix		read seaborn website
+	8		muted			read seaborn website
+	9		hls			read seaborn website
+	10		Set2			read seaborn website
 
 
 
@@ -153,15 +153,15 @@ Seaborn set_style and set_context (https://seaborn.pydata.org/tutorial/aesthetic
 set_style and set_context are background settings and size (paper; small and talk; large), respectively. 
 
 
-settings	set_style	set_context
-1		whitegrid	paper
-2		whitegrid	talk
-3		white		paper
-4		white		talk
-5		darkgrid	paper
-6		darkgrid	talk
-7		dark		paper
-8		dark		talk
+	settings	set_style	set_context
+	1		whitegrid	paper
+	2		whitegrid	talk
+	3		white		paper
+	4		white		talk
+	5		darkgrid	paper
+	6		darkgrid	talk
+	7		dark		paper
+	8		dark		talk
 
 
 
