@@ -2,7 +2,7 @@
 
 Generate nine different plots (bar, box, density, dot, heatmap, histogram, line, scatter, or violin) from RNAseq result table using seaborn program.
 
-Please type this code "conda install -c anaconda seaborn=0.9.0" to update seaborn to use rnaseq_figure_plotter software.
+This software runs in python 2.7 environment. Please type this code "conda install -c anaconda seaborn=0.9.0" to update seaborn to use rnaseq_figure_plotter software.
 
 It is python codes and use "python rnaseq_figure_plotter.py -i input_file -t bar -o output_file -g gene_list_file  ... -c 5 -s 6" to run!
 
