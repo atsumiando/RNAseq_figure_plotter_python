@@ -1,0 +1,7 @@
+geneA
+geneG
+geneI
+geneP
+geneW
+geneX
+geneZ
