@@ -15,27 +15,41 @@ It is python codes and use "python rnaseq_figure_plotter.py -i input_file -t bar
 required function
 
   	INPUT		-i, --input		input file name
- 	 TYPE		-t, --type		choose plot types (bar, box, density, dot, heatmap, histogram, line, scatter, or violin)
+ 	
+	TYPE		-t, --type		choose plot types (bar, box, density, dot, heatmap, histogram, line, scatter, or violin)
 
 general optional function
 
   	OUTPUT		-o, --output		default output; output file name
-  	GENE		-g, --gene		file name of specific gene ID list; generate "output"_gene_selection.txt file
+  	
+	GENE		-g, --gene		file name of specific gene ID list; generate "output"_gene_selection.txt file
+	
 	LOG2		-l, --log		default None; calculate log value (log2; 2, log10; 10, loge; e)
+	
 	LOG2_NUMBER	-lgn, --log_number		default 0.000000001; add number to avoid -inf for log value
+	
 	XAXIS		-x, --xaxis		default samples; choose x-axis (gene, sample, or value)
+	
 	YAXIS		-y, --yaxis		default data; choose y-axis (gene, sample, or value)
+	
 	ZAXIS		-z, --zaxis		default gene; choose z-axis (gene, sample, or value)
+	
 	COLOR		-c, --color		default 1; choose color type (1-10)
+	
 	FIGURE_SAVE_FORMAT	-f, --figure_save_format		default pdf; choose format of figures (eps, jpeg, jpg, pdf, pgf, png, ps, raw, rgba, svg, svgz, tif, or tiff)
 
 optional parameter for individual plot types
 
 	STYLE		-s, --style		default 1; choose style of figures (1-8)
+	
 	ZSCORE		-zs, --zscore		default None; apply z-score transformation in heatmap. Z-score application in column or row is --xaxis (column); 1, and --zaxis (row); 2)
+	
 	CLUSTER_COLUMN	-cc, --cluster_column		default None; apply column cluster function for heatmap (on; 1)
+	
 	CLUSTER_ROW	-cr, --cluster_row		default None; apply row cluster function for heatmap (on; 1)
+	
 	SCATTER_COLUMN	-sc, --scatter_column		default None; type column of two samples for comparison in dot plot. Split samples by comma(,). (example "sample1,sample2")
+	
 	SCATTER_ROW	-sr, --scatter_row		default None; type row of two genes for comparison in dot plot. Split genes by comma(,). (example "geneA,geneB")
 
 
